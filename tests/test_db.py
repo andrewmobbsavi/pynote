@@ -6,6 +6,13 @@ sys.path.insert(0, '../')
 import model
 
 class Testing(unittest.TestCase):
+    def test_note_view(self):
+        """
+        Test whether we can view a note properly
+        """
+        note_get = model.view_note(1)
+        print(note_get)
+
     def test_note_add(self):
         
         """

@@ -14,7 +14,20 @@ def save_note(note):
 
 
 # Adding a button to view saved notes
+def view_note(note_id):
+    print("Getting note")
+    print(note_id)
+    conn = sqlite3.connect(DBNAME)
+    cursor = conn.cursor()
+    cursor.execute("CREATE TABLE IF NOT EXISTS notes (id INTEGER PRIMARY KEY AUTOINCREMENT, content TEXT)")
+    cursor.execute(f"SELECT * FROM {TABLENAME} WHERE id = ?", (note_id,))
+    notes = cursor.fetchall()
+    conn.close()
+    return notes
+
+# Getting the multiple notes
 def view_notes():
+    print("Getting notes")
     conn = sqlite3.connect(DBNAME)
     cursor = conn.cursor()
     cursor.execute("CREATE TABLE IF NOT EXISTS notes (id INTEGER PRIMARY KEY AUTOINCREMENT, content TEXT)")
@@ -22,6 +35,8 @@ def view_notes():
     notes = cursor.fetchall()
     conn.close()
     return notes
+
+
 
 def get_note_count():
     conn = sqlite3.connect(DBNAME)
