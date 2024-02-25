@@ -1,0 +1,19 @@
+NOTE LIST  
+------------------------------------------
+Allow unlimited notes
+Allow ordering of notes
+Notes list to appear at left of screen
+Notes can be reorderd
+Notes list can have icon
+Notes can be encrypted
+Note section can be scrolled
+
+WRITING NOTE 
+-----------------------------------------
+Note can be updated
+Note can be recovered
+Change can be undone
+Note can be selected
+Note can be pasted
+Note can be selected all 
+
