@@ -59,7 +59,7 @@ def show_note_buttons(frame_left):
     for note in notes:
         print(note[0])
         
-        view_note_button = tk.Button(frame_left, text=note[1], command=lambda: show_note(note[0]))
+        view_note_button = tk.Button(frame_left, text=note[1], command=lambda id = note[0]: show_note(id))
         view_note_button.place(x = 0, y = button_y, width = button_left_width, height = button_height)
         button_y += 55
 
