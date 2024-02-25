@@ -9,7 +9,7 @@ class Testing(unittest.TestCase):
     def test_note_add(self):
         
         """
-        Test that adds a new note and checks if new note is added
+        Test that adds a new note and checks if that new note is added
         """
         resultgetStart = model.get_note_count()
         model.save_note("TEST NOTE")
